@@ -4,12 +4,13 @@
 <head>
     <title>Get Covid Vaccination Slots</title>
     <meta name="description"
-        content="Find the availabilty of covid vaccines here according to the required age and inthe required area. The list is provided fro user's pin code" />
+          content="Find the availabilty of covid vaccines here according to the required age and inthe required area. The list is provided fro user's pin code"/>
     <meta name="keywords"
-        content="covid, covid-19, vaccine, covid-19 vaccine, pandemic,vaccination slots,CoWin,fight corona,slots for vaccination, get covid vaccine,availabilty of covid vaccine">
+          content="covid, covid-19, vaccine, covid-19 vaccine, pandemic,vaccination slots,CoWin,fight corona,slots for vaccination, get covid vaccine,availabilty of covid vaccine">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
+
             $('#covidForm').on('submit', (function (e) {
 
                 e.preventDefault();
@@ -38,11 +39,39 @@
             background-image: url("./assets/background.jpeg");
         }
 
+        a:link {
+            color: green;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: green;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: red;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: yellow;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
         #container {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
+        }
+
+        #covidForm {
+            padding: 3%;
         }
 
         #header {
@@ -81,6 +110,7 @@
             margin-left: 10px;
         }
 
+
         #formBody {
             display: flex;
             justify-content: center;
@@ -90,7 +120,7 @@
         #formLeft {
             display: flex;
             flex-direction: column;
-            padding: 2%;
+            padding: 1%;
             justify-content: space-between;
         }
 
@@ -100,6 +130,13 @@
             color: rgb(96, 130, 182);
             text-align: center;
             font-weight: bold;
+        }
+
+        #formSubHeading {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 15px;
+            /*color: rgb(96, 130, 182);*/
+            text-align: center;
         }
 
         form {
@@ -152,57 +189,47 @@
             align-items: center;
             margin-bottom: 20px;
         }
-
-        #devInfo {
-            font-family: Helvetica, Arial, sans-serif;
-            font-size: 14px;
-            color: rgb(96, 130, 182);
-            text-align: center;
-            margin-bottom: 20px;
-        }
     </style>
 </head>
 
 <body>
-    <div id="container">
-        <div id="header">
-            <a href="https://www.cowin.gov.in/home">
-                <div id="logo">
-                    <img src="./assets/vaccination.png" id="icon" />
-                    <h3>Covid Vaccine</h3>
-                </div>
-            </a>
-            <h2>Vaccination slots</h2>
-        </div>
-        <div id="formBody">
-            <div id="formLeft">
-                <p id="formHeading">Get list of available centers and slots for covid vaccination near you in a click
-                </p>
-                <div id="devInfo">
-                    Developed by
-                    <a href="https://www.linkedin.com/in/bansalrohit90">Rohit</a>
-                    &
-                    <a href="https://www.linkedin.com/in/amrita-gupta-4943b4115/">Amrita</a>. We will not save, share
-                    or
-                    sell
-                    data.
-                </div>
-                <form id="covidForm">
-                    <label for="emailId">Email ID:</label>
-                    <input type="text" id="emailId" name="emailId" required><br><br>
-                    <label for="pin">Area PIN Code:</label>
-                    <input type="text" id="pin" name="pin" required><br><br>
-                    <label for="noOfDays">Number of days to check for available slots:</label>
-                    <input type="text" id="noOfDays" name="noOfDays" required><br><br>
-                    <div id="checkbox">
-                        <input type="checkbox" id="under45Only" name="under45Only" value="true">
-                        <label for="under45Only"> Check if you want to know slots for under 45 years age only</label>
-                    </div>
-                    <button type="submit" id="submitButton">Submit</button>
-                </form>
+<div id="container">
+    <div id="header">
+        <a href="https://www.cowin.gov.in/home">
+            <div id="logo">
+                <img src="./assets/vaccination.png" id="icon"/>
+                <h3>Covid Vaccine</h3>
             </div>
+        </a>
+        <h2>Vaccination slots</h2>
+    </div>
+    <div id="formBody">
+        <div id="formLeft">
+            <p id="formHeading">Get list of available centers and slots for covid vaccination near you in a click
+            </p>
+            <div id="formSubHeading">Developed by <a href="https://www.linkedin.com/in/bansalrohit90">Rohit</a> & <a
+                    href="https://www.linkedin.com/in/amrita-gupta-4943b4115/">Amrita</a>. We will not save, share or
+                sell
+                data.
+            </div>
+
+            <form id="covidForm">
+                <label for="emailId">Email ID:</label>
+                <input type="text" id="emailId" name="emailId" required><br><br>
+                <label for="pin">Area PIN Code:</label>
+                <input type="text" id="pin" name="pin" required><br><br>
+                <label for="noOfDays">Number of days to check for available slots:</label>
+                <input type="text" id="noOfDays" name="noOfDays" required><br><br>
+                <div id="checkbox">
+                    <input type="checkbox" id="under45Only" name="under45Only" value="true">
+                    <label for="under45Only"> Check if you want to know slots for under 45 years age only</label>
+                </div>
+                <button type="submit" id="submitButton">Submit</button>
+            </form>
         </div>
     </div>
+
+</div>
 
 
 </body>
