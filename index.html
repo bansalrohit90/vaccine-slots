@@ -14,6 +14,7 @@
             $('#covidForm').on('submit', (function (e) {
 
                 e.preventDefault();
+                $('#submitButton').attr("disabled", true);
 
                 $.ajax({
                     url: "http://services.covislot.online//checkslots",
@@ -21,9 +22,11 @@
                     data: $(this).serialize(),
                     success: function (data) {
                         alert(data);
+                        $('#submitButton').attr("disabled", false);
                     },
                     error: function (data) {
                         alert(data);
+                        $('#submitButton').attr("disabled", false);
                     }
                 });
                 return false;
@@ -135,8 +138,8 @@
             color: rgb(96, 130, 182);
             background-color: rgb(137, 207, 240, 0.7);
             border-radius: 10px;
-            border-style: none;
             font-weight: bold;
+            border-color: #FFFFFF;
         }
 
         label {
@@ -182,7 +185,7 @@
                         <input type="checkbox" id="under45Only" name="under45Only" value="true">
                         <label for="under45Only"> Check if you want to know slots for under 45 years age only</label>
                     </div>
-                    <button type="submit">Submit</button>
+                    <button type="submit" id="submitButton">Submit</button>
                 </form>
             </div>
         </div>
