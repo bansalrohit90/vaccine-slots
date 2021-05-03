@@ -1,1 +1,167 @@
-<meta http-equiv="refresh" content="0; url=https://bansalrohit90.github.io/src/index.html">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Get Covid Vaccination Slots</title>
+    <meta name="description"
+          content="Find the availabilty of covid vaccines here according to the required age and inthe required area. The list is provided fro user's pin code"
+    />
+    <meta name="keywords"
+          content="covid, covid-19, vaccine, covid-19 vaccine, pandemic,vaccination slots,CoWin,fight corona,slots for vaccination, get covid vaccine,availabilty of covid vaccine">
+    <style>
+        body {
+            background-image: url("./assets/background.jpeg");
+        }
+
+        #container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        #header {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: rgb(137, 207, 240, 0.7);
+            color: #FFFFFF;
+            padding: 1%;
+            font-family: Helvetica, Arial, sans-serif;
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+
+        #logo {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        #icon {
+            height: 60px;
+            width: 60px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-right: 200px;
+        }
+
+        h3 {
+            margin-left: 10px;
+        }
+
+
+        #formBody {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #formLeft {
+            display: flex;
+            flex-direction: column;
+            padding: 5%;
+            justify-content: space-between;
+        }
+
+        #formHeading {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 20px;
+            color: rgb(96, 130, 182);
+            text-align: center;
+            font-weight: bold;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #emailId, #pin, #noOfDays {
+            font-size: medium;
+            padding: 1%;
+            background: transparent;
+            width: 50%;
+            border-radius: 5px;
+            border-color: rgb(137, 207, 240);
+            border-style: solid;
+        }
+
+        textarea {
+            font-size: medium;
+            width: 100%;
+            padding: 4%;
+            color: #21B394;
+            border: 2px solid #21B394;
+            border-radius: 4px;
+        }
+
+        button {
+            font-size: medium;
+            width: 50%;
+            padding: 3%;
+            color: rgb(96, 130, 182);
+            background-color: rgb(137, 207, 240, 0.7);
+            border-radius: 10px;
+            border-style: none;
+            font-weight: bold;
+        }
+
+        label {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000000;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        #checkbox {
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="header">
+        <a href="https://www.cowin.gov.in/home">
+            <div id="logo">
+                <img src="./../assets/vaccination.png" id="icon"/>
+                <h3>Covid Vaccine</h3>
+            </div>
+        </a>
+        <h2>Vaccination slots</h2>
+    </div>
+    <div id="formBody">
+        <div id="formLeft">
+            <p id="formHeading">Get list of available centers and slots for covid vaccination near you in a click</p>
+            <form action="http://13.233.58.51:8080/checkslots" method="get" target="_blank">
+                <label for="emailId">Email ID:</label>
+                <input type="text" id="emailId" name="emailId"><br><br>
+                <label for="pin">Area PIN Code:</label>
+                <input type="text" id="pin" name="pin"><br><br>
+                <label for="noOfDays">Number of days to check for available slots</label>
+                <input type="text" id="noOfDays" name="noOfDays"><br><br>
+                <div id="checkbox">
+                    <input type="checkbox" id="under45Only" name="under45Only" value="true">
+                    <label for="under45Only"> Check if you want to know slots for under 45 years age only</label>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</body>
+</html>
